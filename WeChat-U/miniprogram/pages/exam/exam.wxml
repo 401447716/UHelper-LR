@@ -1,0 +1,19 @@
+<view class='examItems' wx:for="{{examInfo}}" wx:key='id'>
+  <view class='examName'>
+    <text class='examText'>{{item.courseName}}</text>
+  </view>
+  <view class='examCountDown'>
+    <text class='examCountDownText'>考试倒计时：{{item.countdown}}</text>
+  </view>
+  <view class='examTime'>
+    <text class='examTimeText'>考试时间：{{item.testTime}}</text>
+  </view>
+  <view class='examInfo'>
+    <view class='examAddress'>
+      <text class='examAddressText'>考试地点：{{item.place}}</text>
+    </view>
+    <view class='examNo'>
+      <text class='examNoText'>座位号：{{item.seat}}</text>
+    </view>
+  </view>
+</view>

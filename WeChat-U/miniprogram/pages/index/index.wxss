@@ -1,0 +1,187 @@
+/**index.wxss**/
+
+page {
+  background: #f6f6f6;
+  width: 100%;
+  height: 100%;
+}
+
+.title{
+  padding-left:5%;
+  line-height: 40px;
+  font-size: 30rpx;
+  color: #007aff;
+}
+
+.uploader {
+  width: 100%;
+  background: #fff;
+}
+
+.uploader-time {
+  width: 100%;
+  line-height: 30px;
+  font-size: 30rpx;
+  color: #007aff;
+}
+
+.title-right{
+  float: right;
+  padding-right: 5%;
+}
+
+.page-section{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.swiper-item{
+  display: block;
+  height: 150px;
+  width: 100%;
+}
+
+.category-view {  
+  background-color: #ffffff;
+  clear: both;
+  width: 100%;
+}
+
+.category-list{
+  width:250rpx;
+  margin-top:20rpx;
+  text-align: center;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.category-column{
+  width:100%;
+  margin-top:20rpx;
+  overflow: hidden;
+}
+
+.category-imgbox{
+  width:80rpx;
+  height:80rpx;
+}
+
+.category-title{
+  font-size: 24rpx;
+  text-align:center;
+  margin-top:10rpx;
+}
+
+.course-view{
+  width: 100%;
+  background: #fff;
+  margin-top: 10rpx; 
+}
+
+.date-view{
+  width: 100%;
+  background: #fff;
+  margin-top: 10rpx; 
+}
+
+.date-title-image{
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin-top: 10px;
+
+}
+
+.date-title-image2{
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-top: 10px;
+
+}
+
+.date-data-view{
+  width: 100%;
+  background: #fff;
+
+}
+
+.date-data-title{
+  border-bottom: 1px #d8d6d6 solid;
+  margin-left: 5%;
+  margin-right: 5%;
+  line-height: 40px;
+  font-size: 30rpx;
+  color: #007aff;
+}
+
+.date-bottom{
+  margin-top: 2%;
+}
+
+.date-data-list{
+  padding-left:5%;
+  width: 100%;
+}
+
+.date-data{
+  height: 25px;
+  padding-left:2%;
+  line-height: 20px;
+  font-size: 30rpx;
+  color: #007aff;
+  margin-right: 5%;
+}
+
+.date-data-id{
+  border-right: 1px #d8d6d6 solid;
+  width: 5%;
+  margin-top: 10px;
+}
+
+.date-data-text{
+  margin-left: 8%;
+  margin-top: -20px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+
+.date-data-image{
+  border-left: 1px #d8d6d6 solid;
+  width: 20px;
+  height: 20px;
+  float: right;
+  padding-left: 2%;
+  margin-right: 5%;
+}
+
+
+.bottom-text{
+  margin-top: 10%;
+  color: #b3b3b3;
+  font-size: 25rpx;
+}
+
+
+
+.itemView{
+  width: 90%;
+  height: 20%;
+  margin-left: 5%;
+  line-height: 70rpx;
+  font-size: 32rpx;
+  border-top: 1px #aaaaaa solid;
+  text-align: center;
+}
+
+.itemText{
+  width: 100%;
+  height: 100%;
+  font-weight:bold;
+}
+
+.itemText2{
+  font-size: 25rpx;
+}

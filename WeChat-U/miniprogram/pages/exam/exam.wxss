@@ -1,0 +1,60 @@
+page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.examItems {
+  margin-bottom: 4%;
+  margin-top: 4%;
+  width: 85%;
+  height: 18%;
+  border-radius: 20rpx;
+  padding: 10rpx 30rpx;
+  border: 1rpx solid rgb(233, 233, 233);
+  box-shadow: 2rpx 2rpx 20rpx #DCDFE6;
+  background: rgb(140, 228, 235);
+}
+
+.examName {
+
+  display: flex;
+  justify-content: center;
+  border-bottom: 1rpx solid rgb(233, 233, 233);
+}
+
+.examText {
+  font-size: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.examCountDownText {
+  font-size: 30rpx;
+}
+
+.examTimeText {
+  font-size: 25rpx;
+}
+
+.examAddress {
+  width: 70%;
+}
+
+.examAddressText {
+  font-size: 25rpx;
+}
+
+.examNo {
+  width: 30%;
+}
+
+.examNoText {
+  font-size: 25rpx;
+}
+
+.examInfo {
+  display: flex;
+}

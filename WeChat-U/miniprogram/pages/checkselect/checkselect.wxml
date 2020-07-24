@@ -1,0 +1,20 @@
+<view class='allView'>
+  <view class='beCenter'>
+    <view class='selectCourse' wx:for="{{courses_check}}" wx:key="id" wx:for-item="course">
+
+      <view class='iconView'>
+        <image src='{{course.url}}' mode='widthFix'></image>
+      </view>
+
+      <view class='coursemessage2'>
+        <view class='coursemessagetop'>
+          <text class='coursemessage1_font'>{{course.courses.name}}</text>
+        </view>
+        <view class='coursemessagebottom'>
+          <text class='coursemessage2_font'>{{course.courses.type}}  学分:{{course.courses.credit}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='bottomSetting'></view>
+</view>

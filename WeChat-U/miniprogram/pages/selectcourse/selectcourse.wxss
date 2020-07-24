@@ -1,0 +1,201 @@
+page {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.allView {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.beCenter {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(252, 252, 250);
+}
+
+.coursetime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5%;
+  font-size: 29rpx;
+  color: red;
+}
+
+.coursetime1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5%;
+  font-size: 29rpx;
+  color: red;
+  border-bottom: 1rpx solid rgb(233, 233, 233);
+}
+
+.selectCoursePicture {
+  width: 100%;
+  height: 18%;
+}
+
+.selectCourseImage {
+  width: 100%;
+  height: 100%;
+}
+
+.selectCourse {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 15%;
+  flex-direction: row;
+  border-radius: 10rpx;
+  background: white;
+  margin-top: 20rpx;
+  border: 1rpx solid #aaa;
+}
+
+
+
+.font {
+  display: flex;
+}
+
+.iconView {
+  display: flex;
+  width: 10%;
+  height: 100%;
+}
+
+.coursemessage1_font {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-line;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 40rpx;
+  margin-bottom: 10%;
+  font-weight: bold;
+}
+
+.coursemessage2_font {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-line; 
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 30rpx;
+}
+
+.coursemessage2 {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.coursemessagebottom {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.coursemessagetop {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.checkboxView {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkboxView1 {
+  display: flex;
+  width: 10%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.commit {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1rpx solid rgb(233, 233, 233);
+  background: rgb(252, 252, 250);
+}
+
+.commitButton {
+  display: flex;
+  width: 60%;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  background: rgb(81, 211, 250);
+  border-radius: 20rpx;
+}
+
+.selectView{
+  display: flex;
+  width: 100%;
+  height: 5%;
+}
+
+.select{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  height: 100%;
+  color: #aaa;
+  border-bottom: 1rpx solid rgb(219, 218, 218);
+}
+
+
+.round-click{
+    height: 120rpx;
+    width: 120rpx;
+    background-color: #dfd9d9;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 150rpx;
+    left: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
+.round-click navigator{
+    font-size: 32rpx;
+    max-width: 80rpx;
+    color: rgb(228, 72, 72);
+    text-align: center;
+}

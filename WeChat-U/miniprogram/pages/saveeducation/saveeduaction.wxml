@@ -1,0 +1,14 @@
+<!--miniprogram/pages/saveeducation/saveeduaction.wxml-->
+<view class='feedbackimage'>
+	<image style='margin: 0 auto;' class='feedback-image' src='/images/educationsystem.png'></image>
+</view>
+<view style='margin-top:30%'>
+	<text>账号：</text>
+	<input bindinput="account"></input>
+</view>
+<view style='margin-top:5%'>
+	<text>密码：</text>
+	<input type='password' bindinput="password"></input>
+</view>
+<button style='margin-top:10%' bindtap='binding'>绑定</button>
+<text>tips:教务系统有时候会绑定失败，多试两下就可以了</text>

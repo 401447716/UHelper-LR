@@ -1,0 +1,167 @@
+
+.left {
+  width: 50rpx;
+  height: 90%;
+  position: fixed;
+  top: 50rpx;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 9pt;
+  color: #94a6b4;
+  border-radius: 0.2rem;
+  background-color: #f6f9f9;
+}
+
+.left .left_morning {
+  flex: 2;
+}
+
+.left_morning text, .left_afternon view {
+  display: inline-block;
+  height: 18%;
+  width: 100%;
+  padding-top: 50%;
+  align-items: center;
+  text-align: center;
+}
+
+.left .left_afternon {
+  flex: 2;
+}
+
+.left .left_evening {
+  flex: 1;
+}
+
+.left_evening text {
+  display: inline-block;
+  height: 18%;
+  width: 100%;
+  padding-top: 75%;
+  align-items: center;
+  text-align: center;
+}
+
+.table {
+  width: calc(100% - 50rpx);
+  height: calc(90% + 50rpx);
+  left: 50rpx;
+  position: absolute;
+}
+
+.table_weekday {
+  width: calc(145% - 50rpx);
+  height: 50rpx;
+  line-height: 50rpx;
+  opacity: 0.8;
+  color: #94a6b4;
+  background-color: #f6f9f9;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table_weekday .weekday_item {
+  flex: 1;
+  font-size: 23rpx;
+  line-height: 23rpx;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.table_course {
+  width: calc(147% - 50rpx);
+  height: calc(100% - 50rpx);
+  display: flex;
+  flex-direction: column;
+}
+
+.table_course .course_item {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.table_course .course_item .course_tab {
+  width: 14%;
+  height: 100%;
+  display: flex;
+  font-size: 26rpx;
+  box-sizing: border-box;
+  border-radius: 0.4rem;
+  border: 1px solid #eee;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.footer {
+  width: 100%;
+  height: calc(10% - 51rpx);
+  bottom: 0;
+  display: flex;
+  align-items: stretch;
+  position: absolute;
+  font-size: 16rpx;
+  background-color: #1e9fff;
+}
+
+.footer .weekday {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 26rpx;
+}
+
+.footer .switch_week {
+  flex: 2;
+  display: flex;
+}
+
+.switch_week .footer_left {
+  width: 100rpx;
+}
+
+.switch_week .footer_switch {
+  width: calc(100% - 200rpx);
+}
+
+.switch_week .footer_switch view {
+  display: flex;
+  justify-content: center;
+  margin-top: 8.5%;
+  color: #fff;
+  font-size: 26rpx;
+}
+
+.switch_week .footer_right {
+  width: 100rpx;
+  height: 100%;
+}
+
+.switch_week image {
+  width: 44rpx;
+  height: 44rpx;
+  margin-top: 14.5%;
+  padding-left: 24%;
+}
+
+.footer .addcourse {
+  flex: 1;
+  background-color: #1e9fff;
+}
+
+.addcourse image {
+  width: 26rpx;
+  height: 26rpx;
+  margin-top: 12%;
+  margin-left: 42%;
+  display: inline-block;
+}

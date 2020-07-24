@@ -1,0 +1,106 @@
+/* miniprogram/pages/logs/logs.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #f0ffff;
+}
+
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+  text-align: center;
+}
+
+.log-item {
+  margin: 10rpx;
+}
+
+.userinfo-avatar {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: #6495ed;
+  margin-bottom: 5rpx;
+}
+
+.log-title {
+  height: 30%;
+  width: 100%;
+  background-color: #6495ed;
+}
+
+.userinfo {
+  margin: 5%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-nicknamebox{
+  width: 100;
+  text-align: center
+}
+
+.userinfo-nickname {
+  color: #ffdead;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.login-button {
+  font-size: 26rpx;
+  margin: 8rpx;
+  background-color: #0ff;
+}
+
+.data-item {
+  width: 92%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: white;
+  margin: 50rpx auto 0rpx auto;
+  border-bottom: 1px solid #eee;
+}
+
+.data-item-inner {
+  margin-left: 20rpx;
+  font-size: 14px;
+}
+
+.data-item-navigator {
+  display: flex;
+  flex-direction: row;
+  width: 92%;
+  height: 75rpx;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+  margin: 0rpx auto 0rpx auto;
+}
+
+.data-item-text-view {
+  width: 90%;
+  height: 100%;
+}
+
+.data-item-text {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  margin-left: 75rpx;
+}
+
+.data-item-image-view {
+  height: 100%;
+  width: 10%;
+}
+
+.data-item-image {
+  width: 25%;
+  height: 50%;
+  margin-top: 17rpx;
+}

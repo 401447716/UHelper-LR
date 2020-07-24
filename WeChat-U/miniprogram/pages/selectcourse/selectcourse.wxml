@@ -1,0 +1,157 @@
+<view class='allView'>
+  <view class='selectView'>
+    <text class='select' bindtap='selectCourse' style='color:{{selectColor}}'>选课</text>
+    <text class='select' bindtap='quitCourse' style='color:{{quitColor}}'>退课</text>
+    <text class='select' bindtap='repairCourse' style='color:{{bxColor}}'>补选</text>
+  </view>
+  <view>
+    <block wx:if="{{inSelectTime == true}}">
+      <block wx:if="{{!noSelectCourseCanSelect}}">
+        <text class='coursetime'>选课时间:{{selectTime}}---{{selectEndTime}}</text>
+      </block>
+      <block wx:else>
+        <text class='coursetime'>没有课程可选</text>
+      </block>
+    </block>
+    <block wx:elif="{{inQuitTime == true}}">
+      <block wx:if="{{!noQuitCourseCanSelect}}">
+        <text class='coursetime'>退课时间:{{quitTime}}---{{quitEndTime}}</text>
+        <text class='coursetime1'>以下是已选课程</text>
+      </block>
+      <block wx:else>
+        <text class='coursetime'>没有课程可选</text>
+      </block>
+    </block>
+    <block wx:elif="{{inBxTime == true}}">
+      <block wx:if="{{!noBxCourseCanSelect}}">
+        <text class='coursetime'>补选时间:{{bxTime}}---{{bxEndTime}}</text>
+      </block>
+      <block wx:else>
+        <text class='coursetime'>没有课程可选</text>
+      </block>
+    </block>
+  </view>
+
+  <!-->选课内容选项
+  <-->
+    <block wx:if="{{inSelectTime == true}}">
+      <view class='beCenter'>
+        <view class='selectCourse' wx:for="{{courses_check}}" wx:key="id" wx:for-item="course">
+
+          <view class='iconView'>
+            <image src='{{course.url}}' mode='widthFix'></image>
+          </view>
+
+          <view class='coursemessage2'>
+            <view class='coursemessagetop'>
+              <text class='coursemessage1_font'>{{course.name}}</text>
+            </view>
+            <view class='coursemessagebottom'>
+              <text class='coursemessage2_font'>{{course.type}}  学分:{{course.credit}}</text>
+              <!--<text class='coursemessage2_font'>学分:{{course.credit}}</text> -->
+            </view>
+          </view>
+
+          <view class='checkboxView1'>
+            <label class='checkboxView'>
+              <checkbox id='{{course.name}}' data-id='{{course.id}}' bindtap='checkboxChange' checked='{{course.isselect}}'>
+              </checkbox>
+            </label>
+          </view>
+
+        </view>
+      </view>
+    </block>
+
+    <!-->退课内容选项
+    <-->
+      <block wx:if="{{inQuitTime == true}}">
+        <view class='beCenter'>
+          <view class='selectCourse' wx:for="{{courses_check_quit}}" wx:key="id" wx:for-item="course">
+
+            <view class='iconView'>
+              <image src='{{course.url}}' mode='widthFix'></image>
+            </view>
+
+            <view class='coursemessage2'>
+              <view class='coursemessagetop'>
+                <text class='coursemessage1_font'>{{course.courses.name}}</text>
+              </view>
+              <view class='coursemessagebottom'>
+                <text class='coursemessage2_font'>{{course.courses.type}}  学分:{{course.courses.credit}}</text>
+              </view>
+            </view>
+
+            <view class='checkboxView1'>
+              <label class='checkboxView'>
+                <checkbox id='{{course.courses.name}}' data-id='{{course.courses.id}}' bindtap='checkboxChange' checked='{{course.courses.isselect}}'>
+                </checkbox>
+              </label>
+            </view>
+
+          </view>
+        </view>
+      </block>
+
+      <!-->补选内容选项
+      <-->
+        <block wx:if="{{inBxTime  == true}}">
+          <view class='beCenter'>
+            <view class='selectCourse' wx:for="{{courses_repair}}" wx:key="id" wx:for-item="course">
+
+              <view class='iconView'>
+                <image src='{{course.url}}' mode='widthFix'></image>
+              </view>
+
+              <view class='coursemessage2'>
+                <view class='coursemessagetop'>
+                  <text class='coursemessage1_font'>{{course.name}}</text>
+                </view>
+                <view class='coursemessagebottom'>
+                  <text class='coursemessage2_font'>{{course.type}}  学分:{{course.credit}}</text>
+                </view>
+              </view>
+
+              <view class='checkboxView1'>
+                <label class='checkboxView'>
+                  <checkbox id='{{course.name}}' data-id='{{course.id}}' bindtap='checkboxChangeByRepair' checked='{{course.isselect}}'>
+                  </checkbox>
+                </label>
+              </view>
+
+            </view>
+          </view>
+        </block>
+
+        <block wx:if="{{inSelectTime}}">
+          <block wx:if="{{!noSelectCourseCanSelect}}">
+            <block wx:if="{{first}}">
+              <view class='commit'>
+                <text class='commitButton' bindtap='commitmessage'>确认</text>
+              </view>
+            </block>
+            <block wx:else>
+              <view class='commit'>
+                <text class='commitButton' bindtap='changemessage'>修改</text>
+              </view>
+            </block>
+          </block>
+        </block>
+        <block wx:elif="{{inQuitTime}}">
+          <block wx:if="{{!noQuitCourseCanSelect}}">
+            <view class='commit'>
+              <text class='commitButton' bindtap='deletemessage'>退选</text>
+            </view>
+          </block>
+        </block>
+        <block wx:elif="{{inBxTime}}">
+          <block wx:if="{{!noBxCourseCanSelect}}">
+            <view class='commit'>
+              <text class='commitButton' bindtap='commitRepairMessage'>确认</text>
+            </view>
+          </block>
+        </block>
+        <view class="round-click">
+          <navigator url='/pages/checkselect/checkselect?account={{account}}'>查看已选</navigator>
+        </view>
+</view>

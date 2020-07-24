@@ -1,0 +1,64 @@
+<!--miniprogram/pages/logs/logs.wxml-->
+<view class='log-title'>
+  <view class="container">
+    <view class="userinfo">
+      <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+      ></button>
+      <view class='userinfo-nicknamebox'>
+        <text wx:if="{{logged}}" class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <block wx:else>
+          <button class='login-button' open-type="getUserInfo" bindgetuserinfo="onGetUserInfo"> 登录 </button>
+        </block>
+      </view>    
+    </view>
+  </view>
+</view>
+
+<view class='data-item'>
+  <navigator class='data-item-inner' url="logs">资料同步</navigator>
+</view>
+
+
+<navigator class='data-item-navigator' url="../saveeducation/saveeduaction">
+  <view class='data-item-text-view'>
+    <text class='data-item-text'>教务系统绑定</text>
+  </view>
+  <view class='data-item-image-view'>
+    <image class='data-item-image' src='https://cdn.it120.cc/images/weappshop/arrow-right.png' mode='aspectFit'></image>
+  </view>
+</navigator>
+
+<view class='data-item'>
+  <navigator class='data-item-inner' url="logs">关于</navigator>
+</view>
+
+<navigator class='data-item-navigator' url="logs" bindtap='aboutsystem'>
+  <view class='data-item-text-view'>
+    <text class='data-item-text'>关于程序</text>
+  </view>
+  <view class='data-item-image-view'>
+    <image class='data-item-image' src='https://cdn.it120.cc/images/weappshop/arrow-right.png' mode='aspectFit'></image>
+  </view>
+</navigator>
+
+<navigator class='data-item-navigator' url="../feedback/feedback">
+  <view class='data-item-text-view'>
+    <text class='data-item-text'>反馈</text>
+  </view>
+  <view class='data-item-image-view'>
+    <image class='data-item-image' src='https://cdn.it120.cc/images/weappshop/arrow-right.png' mode='aspectFit'></image>
+  </view>
+</navigator>
+
+<navigator class='data-item-navigator' url="logs" bindtap='deleteall'>
+  <view class='data-item-text-view'>
+    <text class='data-item-text'>清空数据</text>
+  </view>
+  <view class='data-item-image-view'>
+    <image class='data-item-image' src='https://cdn.it120.cc/images/weappshop/arrow-right.png' mode='aspectFit'></image>
+  </view>
+</navigator>

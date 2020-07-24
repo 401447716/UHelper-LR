@@ -1,0 +1,83 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="uploader">
+		<view class="title">
+			<text>{{year}}.{{month}}.{{day}}</text>
+			<text class='title-right'>{{week2}}</text>
+		</view>
+	</view>
+
+
+	<view class="page-section">
+		<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+			<block wx:for="{{background}}" wx:key="*this">
+				<swiper-item>
+					<image src="{{item}}" class="swiper-item" />
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+
+
+	<view class='category-view'>
+		<view class="category-list" wx:for="{{category}}" wx:if="{{index%2===0}}" wx:key="property">
+			<view class="category-column" bindtap="tabClick" id="{{category[index].id}}">
+				<image class="category-imgbox" src="{{category[index].icon}}"></image>
+				<view class="category-title">{{category[index].name}}</view>
+			</view>
+			<view class="category-column" bindtap="tabClick" id="{{category[index+1].id}}">
+				<image class="category-imgbox" src="{{category[index+1].icon}}"></image>
+				<view class="category-title">{{category[index+1].name}}</view>
+			</view>
+		</view>
+	</view>
+
+
+	<view class='course-view'>
+		<view class='title'>
+			<text>今日课表</text>
+		</view>
+		<view wx:for="{{coursess}}" wx:for-index="index" wx:key="index" wx:for-item="courses_item">
+			<block wx:if="{{courses_item.have}}">
+				<view class='itemView'>
+					<image class='date-title-image2' src='{{courses_item.url}}' mode='aspectFit'></image>
+					<text class='itemText'>{{courses_item.name}}\n</text>
+					<text class='itemText2' decode="{{true}}">{{courses_item.place}}&nbsp;&nbsp;&nbsp;</text>
+					<text class='itemText2' decode="{{true}}">{{courses_item.teacher}}</text>
+				</view>
+			</block>
+		</view>
+	</view>
+
+
+	<!-- <view class='date-view'>
+    <view class='date-data-title'>
+      <text>日程安排</text>
+      <image class='date-title-image' src='/images/add.png' mode='aspectFit' bindtap='dateAddClick'></image>
+    </view>
+    <view class='date-data-view'>
+      <view class='date-data-list'>
+        <view class='date-data' wx:for="{{datedata}}" wx:for-item="item" wx:key="property">
+          <image class='date-data-image' src='/images/reduce.png' mode='aspectFit' bindtap='dateReduceClick' id='{{item.id}}'></image>
+          <view class='date-data-id'>
+            <text>{{item.id}}</text>
+          </view>
+          <view class='date-data-text' bindtap='showdata' id='{{item.id}}'>
+            <text>{{item.data}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class='date-bottom'></view>
+    </view>
+  </view> -->
+
+	<view class='bottom-text'>
+		<text>{{bottomtext}}</text>
+	</view>
+
+
+
+
+</view>

@@ -1,0 +1,117 @@
+
+  <!--  侧边栏  -->
+  <view class='left'>
+    <view class='left_morning'>
+      <text>1</text>
+      <text>2</text>
+      <text>3</text>
+      <text>4</text>
+    </view>
+    <view class='left_afternon'>
+      <view>5</view>
+      <view>6</view>
+      <view>7</view>
+      <view>8</view>
+    </view>
+    <view class='left_evening'>
+      <text>9</text>
+      <text>10</text>
+    </view>
+    <view class='left_evening'>
+      <text>11</text>
+      <text>12</text>
+    </view>
+  </view>
+
+  <scroll-view scroll-x="true" class='table'>
+    <!-- 星期信息  -->
+    <view class='table_weekday'>
+      <view class='weekday_item' wx:for="{{week_day}}" wx:for-index='index' wx:key="index">周{{item}}</view>
+    </view>
+    <!-- 表格部分  -->
+    <view class='table_course'>
+      <view class='course_item'>
+        <view class='course_tab' wx:for="{{coursess1}}" wx:key="index" wx:for-index="index">
+          <block wx:if="{{item.have}}">
+            <text>{{item.name}}</text>
+            <text>{{item.place}}</text>
+          </block>
+        </view>
+      </view>
+
+      <view class='course_item'>
+        <view class='course_tab' wx:for="{{coursess2}}" wx:key="index" wx:for-index="index">
+          <block wx:if="{{item.have}}">
+            <text>{{item.name}}</text>
+            <text>{{item.place}}</text>
+          </block>
+        </view>
+      </view>
+
+      <view class='course_item'>
+        <view class='course_tab' wx:for="{{coursess3}}" wx:key="index" wx:for-index="index">
+          <block wx:if="{{item.have}}">
+            <text>{{item.name}}</text>
+            <text>{{item.place}}</text>
+          </block>
+        </view>
+      </view>
+
+      <view class='course_item'>
+        <view class='course_tab' wx:for="{{coursess4}}" wx:key="index" wx:for-index="index">
+          <block wx:if="{{item.have}}">
+            <text>{{item.name}}</text>
+            <text>{{item.place}}</text>
+          </block>
+        </view>
+      </view>
+
+      <view class='course_item'>
+        <view class='course_tab' wx:for="{{coursess5}}" wx:key="index" wx:for-index="index">
+          <block wx:if="{{item.have}}">
+            <text>{{item.name}}</text>
+            <text>{{item.place}}</text>
+          </block>
+        </view>
+      </view>
+
+      <view class='course_item'>
+        <view class='course_tab' wx:for="{{coursess6}}" wx:key="index" wx:for-index="index">
+          <block wx:if="{{item.have}}">
+            <text>{{item.name}}</text>
+            <text>{{item.place}}</text>
+          </block>
+        </view>
+      </view>
+
+    </view>
+  </scroll-view>
+
+
+
+  <!-- 底部栏 星期几、切换周数、添加课程  -->
+  <view class='footer'>
+    <view class='weekday'>
+      <view>星期{{cur_weekday}}</view>
+    </view>
+    <view class='switch_week'>
+      <view class='footer_left' data-direction="left" bindtap="SwiperChange">
+        <image src='/images/left.png'></image>
+      </view>
+      <view class='footer_switch'>
+        <swiper current='{{swiper.current}}'>
+          <block wx:for="{{swiper.weeks}}" wx:key="index" wx:for-index="index">
+            <swiper-item>
+              <view>{{item}}</view>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+      <view class='footer_right' data-direction="right" bindtap="SwiperChange">
+        <image src='/images/right.png'></image>
+      </view>
+    </view>
+    <view class='addcourse'>
+      <image src='/images/add2.png'></image>
+    </view>
+  </view>

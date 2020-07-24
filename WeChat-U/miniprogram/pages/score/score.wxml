@@ -1,0 +1,83 @@
+<!--pages/score/score.wxml-->
+<view class='feedback'>
+	<image src='/images/score2.png'></image>
+</view>
+
+<view class='user-data'>
+	<view>
+		<p>姓名：</p>
+		<p>{{results.name}}</p>
+	</view>
+	<view>
+		<p>总学分：</p>
+		<p>{{results.credit}}</p>
+	</view>
+</view>
+
+<block wx:for="{{results}}" wx:for-index="index" wx:key="index" wx:for-item="result">
+	<view class='item-view' wx:for="{{result}}" wx:for-index="itemindex" wx:for-item="res" wx:key="itemindex" wx:if="{{index != 'name' && index != 'gpa' && index != 'credit' && itemindex < 3}}">
+		<view class='score-info' bindtap='showMore' data-index="{{index}}{{itemindex}}">
+			<view class='time-view'>
+				<view class='time-message'>
+					<text>{{index}}学年 第{{itemindex}}学期</text>
+				</view>
+				<view class='icon-view'>
+					<image class='icon' src="{{res[0].image}}"></image>
+				</view>
+			</view>
+
+			<view class='secondView'>
+				<view wx:if="{{itemindex==1}}">
+					<text class='theText'>学期学分：{{result.gpa1.all}}</text>
+				</view>
+				<view wx:if="{{itemindex==2}}">
+					<text class='theText'>学期学分：{{result.gpa2.all}}</text>
+				</view>
+				<view wx:if="{{itemindex==1}}">
+					<text class='theText'>平均绩点：{{result.gpa1.gpa}}</text>
+				</view>
+				<view wx:if="{{itemindex==2}}">
+					<text class='theText'>平均绩点：{{result.gpa2.gpa}}</text>
+				</view>
+			</view>
+
+			<view class='thirdView'>
+				<view wx:if="{{itemindex==1}}">
+					<text class='theText'>必修课学分:{{result.gpa1.required}}</text>
+				</view>
+				<view wx:if="{{itemindex==2}}">
+					<text class='theText'>必修课学分:{{result.gpa2.required}}</text>
+				</view>
+				<view wx:if="{{itemindex==1}}">
+					<text class='theText'>选修课学分:{{result.gpa1.elective}}</text>
+				</view>
+				<view wx:if="{{itemindex==2}}">
+					<text class='theText'>选修课学分:{{result.gpa2.elective}}</text>
+				</view>
+				<view wx:if="{{itemindex==1}}">
+					<text class='theText'>通选课学分:{{result.gpa1.general}}</text>
+				</view>
+				<view wx:if="{{itemindex==2}}">
+					<text class='theText'>通选课学分:{{result.gpa2.general}}</text>
+				</view>
+			</view>
+		</view>
+
+		<block wx:if="{{showList[index+itemindex]}}">
+			<view class='messageView'>
+				<text class='messageShowText'>课程</text>
+				<text class='messageShowView'>绩点</text>
+				<text class='messageShowView'>学分</text>
+				<text class='messageShowView'>卷面分</text>
+				<text class='messageShowView'>总分</text>
+			</view>
+			<view class='messageView' wx:for="{{res}}" wx:key="lesson_name">
+				<text class='messageShowText'>{{item.lesson_name}}</text>
+				<text class='messageShowView' decode="{{true}}">{{item.point}}</text>
+				<text class='messageShowView'>{{item.credit}}</text>
+				<text class='messageShowView'>{{item.end_score}}</text>
+				<text class='messageShowView'>{{item.score}}</text>
+			</view>
+		</block>
+	</view>
+</block>

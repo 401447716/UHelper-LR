@@ -1,0 +1,17 @@
+<!--miniprogram/pages/feedback/feedback.wxml-->
+<view class='feedbackimage'>
+  <image style='margin: 0 auto;' class='feedback-image'  src='/images/feedback.png'></image>
+</view>
+
+<view class='basebox'>
+  <view class='title'>
+    <text style=' margin-left: 3%;'>反馈内容</text>
+    <view class='databox'>
+      <textarea  style="height:250rpx" class='datatextarea' placeholder="请少于100个字" maxlength='100' bindinput="gettip" />
+     </view>
+  </view>
+</view>
+
+<view class='basebox'>
+  <button bindtap='submit'>提交</button>
+</view>
