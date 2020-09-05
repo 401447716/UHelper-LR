@@ -37,7 +37,7 @@ Page({
 
     background: [
       'cloud://test-1-52ab98.7465-test-1-52ab98/fcb6e557ce4cef625aa27d1f38d28be.jpg',
-      'cloud://test-1-52ab98.7465-test-1-52ab98/7ffb4ffdf6a3e64ef2c3c7e9f64c127.jpg',
+      'cloud://test-1-52ab98.7465-test-1-52ab98-1259126502/92445efe9af02170ca95c05c77d8913.jpg',
       'cloud://test-1-52ab98.7465-test-1-52ab98/study.jpg'
     ],
     indicatorDots: true,
@@ -326,7 +326,7 @@ Page({
       }
     } else if (month >= 8 || month <= 1) {
       let beginMonth = 8;
-      let beginDay = 25;
+      let beginDay = 31;
       if (month >= 8) {
         for (let i = beginMonth; i <= month; i++) {
           switch (i) {

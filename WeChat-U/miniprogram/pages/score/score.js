@@ -66,7 +66,7 @@ Page({
       wx.hideLoading()
       wx.showToast({
         title: '成绩获取失败',
-        icon: '../images/toerror.png'
+        icon: 'none'
       })
     }
   },

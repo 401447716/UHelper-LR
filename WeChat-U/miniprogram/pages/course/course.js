@@ -82,7 +82,7 @@ Page({
       wx.hideLoading()
       wx.showToast({
         title: '课表获取失败',
-        icon: '../images/toerror.png'
+        icon: 'none'
       })
     }
   },
@@ -306,7 +306,7 @@ Page({
       }
     } else if (month >= 8 || month <= 1) {
       let beginMonth = 8;
-      let beginDay = 25;
+      let beginDay = 31;
       if (month >= 8) {
         for (let i = beginMonth; i <= month; i++) {
           switch (i) {

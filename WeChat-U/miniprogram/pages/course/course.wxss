@@ -78,6 +78,7 @@
   height: calc(100% - 50rpx);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .table_course .course_item {

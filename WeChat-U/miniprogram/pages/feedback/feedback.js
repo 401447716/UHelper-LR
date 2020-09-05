@@ -1,4 +1,7 @@
 // miniprogram/pages/feedback/feedback.js
+import {
+  formatDate
+} from '../../utils/utils.js';
 Page({
 
   /**
@@ -39,7 +42,7 @@ Page({
     const db = wx.cloud.database()
     db.collection('feedback').add({
       data: {
-        tip:that.data.tip
+        tip:that.data.tip + '----' + new Date().toLocaleDateString()
       },
       success: res => {
         // 在返回结果中会包含新创建的记录的 _id

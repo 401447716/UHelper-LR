@@ -89,8 +89,11 @@ Page({
       title: '加载中',
     })
     console.log(_this.data.password)
-    _getClass().then(res => {
-      if (res.data == '' || res.data.code == 40001){
+    app.globalData.account = _this.data.account
+    app.globalData.password = _this.data.password
+    _login().then(res => {
+      console.log(res)
+      if (res.data === null || res.data.code === 40001 || res.data.msg == '失败'){
         wx.hideLoading()
         wx.showToast({
           title: '绑定失败',
@@ -99,7 +102,6 @@ Page({
         return
       } else {          
         _this.savedata()
-        _this.login()
       }    
     }).catch(err => {
       wx.hideLoading()
@@ -109,12 +111,12 @@ Page({
       })
     })
   },
-  login: function (that) { //登录
-    var _this = this
-    _login().then(res => {
-      console.log(res)
-    })
-  },
+  // login: function (that) { //登录
+  //   var _this = this
+  //   _login().then(res => {
+  //     console.log(res)
+  //   })
+  // },
   savedata: function(){
     console.log('save')
     const db = wx.cloud.database()
@@ -124,18 +126,13 @@ Page({
       _openid: app.globalData.openid
     }).get({
       success: res => {
-        console.log('test1')
-        console.log(res)
         if (res.data == ''){
-          console.log('adddata')
           this.addData()
         }else{
-          console.log('updata')
           this.upData()
         }
       },
       fail: err => {
-        console.log('test2')
         //this.addData()
       }
     })
@@ -151,9 +148,6 @@ Page({
         password: _this.data.password
       },
       success: function (res) {
-        console.log('success')
-        app.globalData.account = _this.data.account
-        app.globalData.password = _this.data.password
         wx.hideLoading()
         setTimeout(function () {
           wx.showToast({
@@ -165,7 +159,6 @@ Page({
         })
       },
       fail: err => {
-        console.log('fail')
         setTimeout(function () {
           wx.showToast({
             title: '绑定失败',
@@ -179,7 +172,6 @@ Page({
     const db = wx.cloud.database()
     const _ = db.command
     var _this = this
-    console.log('add...')
     db.collection('EducationSystem').add({
       data: {
         _id: app.globalData.openid,
@@ -187,9 +179,6 @@ Page({
         password: _this.data.password
       },
       success: res => {
-        console.log('test')
-        app.globalData.account = _this.data.account,
-        app.globalData.password = _this.data.password
         wx.hideLoading()
         setTimeout(function () {
           wx.showToast({
