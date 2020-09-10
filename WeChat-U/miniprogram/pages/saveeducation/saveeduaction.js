@@ -74,14 +74,14 @@ Page({
       return
     }
     var p = _this.data.password
-    p = p.replace('%', '%25')
-    p = p.replace('+', '%2B')
-    p = p.replace(' ', '+')
-    p = p.replace('/', '%2F')
-    p = p.replace('?', '%3F')    
-    p = p.replace('#', '%23')
-    p = p.replace('&', '%26')
-    p = p.replace('=', '%3D')
+    // p = p.replace('%', '%25')
+    // p = p.replace('+', '%2B')
+    // p = p.replace(' ', '+')
+    // p = p.replace('/', '%2F')
+    // p = p.replace('?', '%3F')    
+    // p = p.replace('#', '%23')
+    // p = p.replace('&', '%26')
+    // p = p.replace('=', '%3D')
     this.setData({
       password: p
     })
